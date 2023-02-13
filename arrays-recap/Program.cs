@@ -10,7 +10,8 @@ namespace arrays_recap
     {
         static void Main(string[] args)
         {
-            PrintArrayDeclarations();
+            int[,] matrix = ArrayTwoDimentional.GetRandomMatrix(5, 5);
+            ArrayTwoDimentional.PrintMatrix(matrix);
         }
 
         private static void PrintArrayDeclarations()

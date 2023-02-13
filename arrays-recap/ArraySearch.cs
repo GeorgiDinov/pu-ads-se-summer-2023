@@ -11,7 +11,7 @@ namespace arrays_recap
 
 
         //Linear search
-        private static int LinearSearch(int[] arrayToSearchIn, int numberToSearchFor)
+        public static int LinearSearch(int[] arrayToSearchIn, int numberToSearchFor)
         {
             for (int i = 0; i < arrayToSearchIn.Length; i++)
             {
@@ -26,7 +26,7 @@ namespace arrays_recap
 
         //Binary search
         //*** remeber, works only on sorted array/collection
-        private static int BinarySearch(int[] arrayToSearchIn, int numberToSearchFor)
+        public static int BinarySearch(int[] arrayToSearchIn, int numberToSearchFor)
         {
             int first = 0;
             int last = arrayToSearchIn.Length - 1;

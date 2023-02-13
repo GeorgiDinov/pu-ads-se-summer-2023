@@ -43,7 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArrayCopy.cs" />
+    <Compile Include="ArrayMerge.cs" />
+    <Compile Include="ArrayMinMaxSumAvg.cs" />
+    <Compile Include="ArrayRotation.cs" />
     <Compile Include="ArraySearch.cs" />
+    <Compile Include="ArrayTwoDimentional.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
