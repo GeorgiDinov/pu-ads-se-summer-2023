@@ -45,7 +45,7 @@ namespace arrays_recap
             return resultArray;
         }
 
-        private static int[] MergeTwoSortedArraysInClassImplementation(int[] leftArray, int[] rightArray)
+        public static int[] MergeTwoSortedArraysInClassImplementation(int[] leftArray, int[] rightArray)
         {
             int resultArrayLength = leftArray.Length + rightArray.Length;
             int[] resultArray = new int[resultArrayLength];
