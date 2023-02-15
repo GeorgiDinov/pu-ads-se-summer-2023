@@ -9,6 +9,14 @@ namespace arrays_recap
     internal class ArrayRotation
     {
 
+        public static void RotateArrayInClass(int[] array)
+        {
+            for (int i = 0; i < array.Length / 2; i++)
+            {
+                Swap(array, i, (array.Length - i) - 1);
+            }
+        }
+
         public static void RotateSingleDimentionalArrayV1(int[] array)
         {
             int last = array.Length - 1;
