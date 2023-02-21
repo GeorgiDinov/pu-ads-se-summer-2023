@@ -32,7 +32,7 @@ namespace internship_tasks_examples
     {
 
 
-        //* this is not a coplete solution
+        //* this is not a complete solution
         public static int PrintNumberInDigitWords(int number)
         {
             string[] digits = new string[] { "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" };
