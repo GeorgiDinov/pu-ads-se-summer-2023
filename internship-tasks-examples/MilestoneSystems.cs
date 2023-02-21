@@ -1,14 +1,5 @@
-﻿using Microsoft.SqlServer.Server;
-using System;
-using System.CodeDom.Compiler;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Remoting.Lifetime;
-using System.Security.Cryptography;
-using System.Security.Policy;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
+﻿using System;
+
 namespace internship_tasks_examples
 {
     //    Computer Science Internship Assignments
