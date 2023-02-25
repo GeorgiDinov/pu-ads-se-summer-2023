@@ -6,7 +6,8 @@ namespace internship_tasks_examples
     {
         static void Main(string[] args)
         {
-            MilestoneSystems.PrintNumberInDigitWords(3581);
+            //MilestoneSystems.PrintNumberInDigitWords(3581);
+            MentorMateMMPrinter.PrintLogoPrompt();
         }
     }
 }
