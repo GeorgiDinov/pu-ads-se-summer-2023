@@ -58,6 +58,13 @@ namespace array_sort
             ProcessArraySort(array);
             Console.WriteLine();
 
+            //IArraySort countSort = new CountSort();
+            //int[] forCountSortArray = ArrayProducer(10, 10);
+            //ArrayPrinter("Unsorted Array = ", forCountSortArray);
+            //Console.WriteLine("Selected sorting strategy is " + countSort.GetType().Name);
+            //countSort.Sort(forCountSortArray);
+            //ArrayPrinter("Sorted Array   = ", forCountSortArray);
+
         }// end of Main method
 
         private static void ProcessArraySort(int[] array)
