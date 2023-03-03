@@ -6,13 +6,13 @@ namespace data_structures
     //AKA Priority Queue
     internal class BinaryHeap<T> where T : IComparable<T>
     {
-        private const int DefultCapacity = 10;
+        private const int DefaultCapacity = 10;
         private IComparer<T> comparer;
         private int size;
         private object[] heap;
 
         //== constructors ==
-        public BinaryHeap() : this(DefultCapacity)
+        public BinaryHeap() : this(DefaultCapacity)
         {
         }
 
@@ -20,7 +20,7 @@ namespace data_structures
         {
         }
 
-        public BinaryHeap(IComparer<T> comparer) : this(DefultCapacity, comparer)
+        public BinaryHeap(IComparer<T> comparer) : this(DefaultCapacity, comparer)
         {
         }
 
@@ -30,7 +30,7 @@ namespace data_structures
             if (initialCapacity < 0)
             {
                 //we are not throwing an exception
-                initialCapacity = DefultCapacity;
+                initialCapacity = DefaultCapacity;
             }
             this.heap = new object[initialCapacity];
             this.comparer = comparer;
@@ -336,9 +336,9 @@ namespace data_structures
 
             if (heapCapacity == 0)
             {
-                newCapacity = DefultCapacity;// to default capacity
+                newCapacity = DefaultCapacity;// to default capacity
             }
-            else if (heapCapacity < DefultCapacity * 2)
+            else if (heapCapacity < DefaultCapacity * 2)
             {
                 newCapacity = heapCapacity * 2; // doubled capacity
             }

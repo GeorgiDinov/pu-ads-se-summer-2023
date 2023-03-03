@@ -16,26 +16,27 @@ namespace data_structures
             Person[] persons = PersonProducer();
             BinaryHeap<Person> minHeap = new BinaryHeap<Person>(0);
             BinaryHeap<Person> maxHeap = new BinaryHeap<Person>(5, new PersonAgeDESCComparer());
+            Stack<Person> stack = new Stack<Person>();
             foreach (Person person in persons)
             {
                 minHeap.Add(person);
                 maxHeap.Add(person);
+                stack.Push(person);
             }
 
-            Console.WriteLine("Iterate over min heap: ");
-            Iterator<Person> minHeapIterator = minHeap.Iterator();
-            while (minHeapIterator.HasNext())
+            //IteratorPrinter(minHeap.Iterator());
+            //IteratorPrinter(maxHeap.Iterator());
+            //IteratorPrinter(stack.Iterator());
+        }
+
+
+        private static void IteratorPrinter<T>(Iterator<T> iterator)
+        {
+            while (iterator.HasNext())
             {
-                Console.WriteLine(minHeapIterator.Next());
+                Console.WriteLine(iterator.Next());
             }
-
-            Console.WriteLine("Iterate over max heap: ");
-            Iterator<Person> maxHeapIterator = maxHeap.Iterator();
-            while (maxHeapIterator.HasNext())
-            {
-                Console.WriteLine(maxHeapIterator.Next());
-            }
-
+            Console.WriteLine();
         }
 
         private static Person[] PersonProducer()
