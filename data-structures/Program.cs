@@ -12,17 +12,21 @@ namespace data_structures
             BinaryHeap<Person> minHeap = new BinaryHeap<Person>(0);
             BinaryHeap<Person> maxHeap = new BinaryHeap<Person>(5, new PersonAgeDESCComparer());
             Stack<Person> stack = new Stack<Person>();
+            ListBackedStack<Person> listBackedStack = new ListBackedStack<Person>();
             Queue<Person> queue = new Queue<Person>(5);
+
             foreach (Person person in persons)
             {
                 //minHeap.Add(person);
                 //maxHeap.Add(person);
                 //stack.Push(person);
+                //listBackedStack.Push(person);
                 //queue.Add(person);
             }
             //IteratorPrinter(minHeap.Iterator());
             //IteratorPrinter(maxHeap.Iterator());
             //IteratorPrinter(stack.Iterator());
+            //IteratorPrinter(listBackedStack.Iterator());
             //IteratorPrinter(queue.Iterator());
 
             //QueueWrapSim();
