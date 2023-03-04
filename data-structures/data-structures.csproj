@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ArrayIterator.cs" />
+    <Compile Include="ArrayList.cs" />
     <Compile Include="BinaryHeap.cs" />
     <Compile Include="IterableNode.cs" />
     <Compile Include="Iterator.cs" />

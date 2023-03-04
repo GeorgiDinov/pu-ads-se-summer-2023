@@ -32,9 +32,11 @@ namespace data_structures
             //IteratorPrinter(queue.Iterator());
             //IteratorPrinter(listBackedQueue.Iterator());
 
-            //QueueWrapSim();
 
+
+            //QueueWrapSim();
             //LinkedListSim();
+            ArrayListSim();
         }
 
 
@@ -72,6 +74,70 @@ namespace data_structures
             };
 
             return persons;
+        }
+
+
+        private static void ArrayListSim()
+        {
+            ArrayList<Person> arrayList = new ArrayList<Person>(5);
+            arrayList.Add(0, new Person("TST", 100));
+
+            Person[] people = PersonProducer();
+            for (int i = 0; i < people.Length; i++)
+            {
+                arrayList.Add(people[i]);
+            }
+
+            IteratorPrinter(arrayList.Iterator());
+
+            Console.WriteLine("Size = " + arrayList.Size());
+            for (int i = 0; i < arrayList.Size(); i++)
+            {
+                Console.WriteLine(arrayList.Get(i));
+            }
+
+            Console.WriteLine(arrayList.Contains(people[3]));
+            Console.WriteLine(arrayList.Contains(null));
+            Console.WriteLine(arrayList.Contains(new Person("Test", 5)));
+
+            //Console.WriteLine(arrayList.Remove(new Person("Test", 5)));
+            Console.WriteLine("Removing " + arrayList.Remove(people[4]));
+            Console.WriteLine("Size = " + arrayList.Size());
+            Console.WriteLine();
+            IteratorPrinter(arrayList.Iterator());
+
+            Console.WriteLine("Removing " + arrayList.Remove(people[0]));
+            Console.WriteLine("Size = " + arrayList.Size());
+            Console.WriteLine();
+            IteratorPrinter(arrayList.Iterator());
+
+            Console.WriteLine("Removing " + arrayList.Remove(people[people.Length - 1]));
+            Console.WriteLine("Size = " + arrayList.Size());
+            Console.WriteLine();
+            IteratorPrinter(arrayList.Iterator());
+
+            Console.WriteLine("Removing " + arrayList.Remove(0));
+            Console.WriteLine("Size = " + arrayList.Size());
+            Console.WriteLine();
+            IteratorPrinter(arrayList.Iterator());
+
+            Console.WriteLine("Removing " + arrayList.Remove(2));
+            Console.WriteLine("Size = " + arrayList.Size());
+            Console.WriteLine();
+            IteratorPrinter(arrayList.Iterator());
+
+
+            Console.WriteLine("Removing " + arrayList.Remove(arrayList.Size() - 1));
+            Console.WriteLine("Size = " + arrayList.Size());
+            Console.WriteLine();
+            IteratorPrinter(arrayList.Iterator());
+
+            while (!arrayList.IsEmpty())
+            {
+                Console.WriteLine("Removing " + arrayList.Remove(0));
+                //Console.WriteLine("Removing " + arrayList.Remove(arrayList.Size() - 1));
+            }
+            Console.WriteLine("Size = " + arrayList.Size());
         }
 
 
