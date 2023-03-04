@@ -45,7 +45,10 @@
   <ItemGroup>
     <Compile Include="ArrayIterator.cs" />
     <Compile Include="BinaryHeap.cs" />
+    <Compile Include="IterableNode.cs" />
     <Compile Include="Iterator.cs" />
+    <Compile Include="LinkedList.cs" />
+    <Compile Include="ListIterator.cs" />
     <Compile Include="PersonAgeDESCComparer.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />

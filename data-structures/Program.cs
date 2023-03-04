@@ -1,5 +1,4 @@
 ﻿using System;
-using System.ComponentModel;
 
 namespace data_structures
 {
@@ -27,6 +26,8 @@ namespace data_structures
             //IteratorPrinter(queue.Iterator());
 
             //QueueWrapSim();
+
+            //LinkedListSim();
         }
 
 
@@ -66,6 +67,59 @@ namespace data_structures
             return persons;
         }
 
+
+        private static void LinkedListSim()
+        {
+            LinkedList<int> linkedList = new LinkedList<int>();
+            linkedList.Add(1);
+            linkedList.Add(2);
+            linkedList.Add(3);
+            IteratorLinePrinter(linkedList.Iterator());
+            Console.WriteLine("LinkedList size = " + linkedList.Size());
+
+            linkedList.AddLast(4);
+            Console.WriteLine("LinkedList size = " + linkedList.Size());
+            IteratorLinePrinter(linkedList.Iterator());
+
+            linkedList.Add(5);
+            Console.WriteLine("LinkedList size = " + linkedList.Size());
+            IteratorLinePrinter(linkedList.Iterator());
+
+            Console.WriteLine("Removing " + linkedList.RemoveFirst());
+            Console.WriteLine("LinkedList size = " + linkedList.Size());
+            IteratorLinePrinter(linkedList.Iterator());
+
+            Console.WriteLine("Removing " + linkedList.RemoveLast());
+            Console.WriteLine("LinkedList size = " + linkedList.Size());
+            IteratorLinePrinter(linkedList.Iterator());
+
+
+            linkedList.AddFirst(10);
+            Console.WriteLine("LinkedList size = " + linkedList.Size());
+            IteratorLinePrinter(linkedList.Iterator());
+
+            linkedList.AddFirst(11);
+            Console.WriteLine("LinkedList size = " + linkedList.Size());
+            IteratorLinePrinter(linkedList.Iterator());
+
+            Console.WriteLine("Removing " + linkedList.RemoveFirst());
+            Console.WriteLine("LinkedList size = " + linkedList.Size());
+            IteratorLinePrinter(linkedList.Iterator());
+
+            linkedList.AddLast(20);
+            Console.WriteLine("LinkedList size = " + linkedList.Size());
+            IteratorLinePrinter(linkedList.Iterator());
+
+            while (!linkedList.IsEmpty())
+            {
+                Console.WriteLine("Peek first " + linkedList.PeekFirst());
+                Console.WriteLine("Peek last" + linkedList.PeekLast());
+                Console.WriteLine("Removing " + linkedList.RemoveFirst());
+                IteratorLinePrinter(linkedList.Iterator());
+            }
+            Console.WriteLine("LinkedList size = " + linkedList.Size());
+            linkedList.PeekFirst();
+        }
 
 
 
