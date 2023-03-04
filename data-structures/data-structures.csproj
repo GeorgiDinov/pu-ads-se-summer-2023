@@ -48,6 +48,7 @@
     <Compile Include="IterableNode.cs" />
     <Compile Include="Iterator.cs" />
     <Compile Include="LinkedList.cs" />
+    <Compile Include="ListBackedQueue.cs" />
     <Compile Include="ListBackedStack.cs" />
     <Compile Include="ListIterator.cs" />
     <Compile Include="PersonAgeDESCComparer.cs" />

@@ -14,6 +14,7 @@ namespace data_structures
             Stack<Person> stack = new Stack<Person>();
             ListBackedStack<Person> listBackedStack = new ListBackedStack<Person>();
             Queue<Person> queue = new Queue<Person>(5);
+            ListBackedQueue<Person> listBackedQueue = new ListBackedQueue<Person>();
 
             foreach (Person person in persons)
             {
@@ -22,12 +23,14 @@ namespace data_structures
                 //stack.Push(person);
                 //listBackedStack.Push(person);
                 //queue.Add(person);
+                //listBackedQueue.Add(person);
             }
             //IteratorPrinter(minHeap.Iterator());
             //IteratorPrinter(maxHeap.Iterator());
             //IteratorPrinter(stack.Iterator());
             //IteratorPrinter(listBackedStack.Iterator());
             //IteratorPrinter(queue.Iterator());
+            //IteratorPrinter(listBackedQueue.Iterator());
 
             //QueueWrapSim();
 

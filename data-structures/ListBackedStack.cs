@@ -4,13 +4,17 @@ namespace data_structures
 {
     internal class ListBackedStack<T>
     {
+
         private LinkedList<T> stack;
 
+        //== constructors ==
         public ListBackedStack()
         {
             stack = new LinkedList<T>();
         }
 
+
+        //== public methods ==
         public void Push(T item)
         {
             stack.AddFirst(item);
