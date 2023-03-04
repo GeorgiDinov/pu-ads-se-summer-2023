@@ -90,19 +90,19 @@ namespace data_structures
         private void GrowBackingStackSize()
         {
             int newCapacity;
-            int heapCapacity = stack.Length;
+            int stackCapacity = stack.Length;
 
-            if (heapCapacity == 0)
+            if (stackCapacity == 0)
             {
                 newCapacity = DefaultCapacity;// to default capacity
             }
-            else if (heapCapacity < DefaultCapacity * 2)
+            else if (stackCapacity < DefaultCapacity * 2)
             {
-                newCapacity = heapCapacity * 2; // doubled capacity
+                newCapacity = stackCapacity * 2; // doubled capacity
             }
             else
             {
-                newCapacity = heapCapacity + (heapCapacity / 2);// with 50 % increase of the capacity
+                newCapacity = stackCapacity + (stackCapacity / 2);// with 50 % increase of the capacity
             }
             GrowBackingStackSize(newCapacity);
         }
