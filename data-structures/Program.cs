@@ -36,7 +36,8 @@ namespace data_structures
 
             //QueueWrapSim();
             //LinkedListSim();
-            ArrayListSim();
+            //ArrayListSim();
+            //HTLinearProbingSim();
         }
 
 
@@ -260,6 +261,102 @@ namespace data_structures
         //    IteratorLinePrinter(queue.Iterator());
         //    queue.PrintInternalState();
         //}
+
+        private static void HTLinearProbingSim()
+        {
+            int someLentgh = 10;
+            for (int i = 0; i < someLentgh; i++)
+            {
+                string msg = i + " % " + someLentgh + " = " + (i % someLentgh);
+                Console.WriteLine(msg);
+            }
+            string msg2 = 135 + " % " + someLentgh + " = " + (135 % someLentgh);
+            Console.WriteLine(msg2);
+            Console.WriteLine();
+            Console.WriteLine("HT sim start point");
+
+            HTPerson p1 = new HTPerson("Ivan", "Ivanov");
+            HTPerson p2 = new HTPerson("Stoqn", "Stefanov");
+            HTPerson p3 = new HTPerson("Marin", "Petev");
+            HTPerson p4 = new HTPerson("Georgi", "Petrov");
+            HTPerson p5 = new HTPerson("John", "Doe");
+
+            HTLinearProbing hashTable = new HTLinearProbing();
+            hashTable.Put(p1.LastName, p1);
+            hashTable.Put(p2.LastName, p2);
+            hashTable.Put(p3.LastName, p3);
+            hashTable.Put(p4.LastName, p4);
+            hashTable.Put(p5.LastName, p5);
+
+            Console.WriteLine("HT size = " + hashTable.Size());
+            Console.WriteLine(String.Format("Load Factor = {0, -20}", hashTable.LoadFactor()));
+            Console.WriteLine();
+            Console.WriteLine("HT state: ");
+            hashTable.Print();
+
+            Console.WriteLine();
+
+            Console.WriteLine("Remove " + hashTable.Remove(p2.LastName));
+            Console.WriteLine("HT size = " + hashTable.Size());
+            Console.WriteLine(String.Format("Load Factor = {0, -20}", hashTable.LoadFactor()));
+            Console.WriteLine();
+            Console.WriteLine("HT state: ");
+            hashTable.Print();
+
+            Console.WriteLine();
+
+            Console.WriteLine("Remove " + hashTable.Remove(p1.LastName));
+            Console.WriteLine("HT size = " + hashTable.Size());
+            Console.WriteLine(String.Format("Load Factor = {0, -20}", hashTable.LoadFactor()));
+            Console.WriteLine();
+            Console.WriteLine("HT state: ");
+            hashTable.Print();
+
+            HTPerson p6 = new HTPerson("John", "Smit");
+            hashTable.Put(p6.LastName, p6);
+            Console.WriteLine("HT size = " + hashTable.Size());
+            Console.WriteLine(String.Format("Load Factor = {0, -20}", hashTable.LoadFactor()));
+            Console.WriteLine();
+            Console.WriteLine("HT state: ");
+            hashTable.Print();
+
+            HTPerson p7 = new HTPerson("Dan", "Don");
+            hashTable.Put(p7.LastName, p7);
+            Console.WriteLine("HT size = " + hashTable.Size());
+            Console.WriteLine(String.Format("Load Factor = {0, -20}", hashTable.LoadFactor()));
+            Console.WriteLine();
+            Console.WriteLine("HT state: ");
+            hashTable.Print();
+
+            Console.WriteLine();
+
+            Console.WriteLine("Remove " + hashTable.Remove(p4.LastName));
+            Console.WriteLine("HT size = " + hashTable.Size());
+            Console.WriteLine(String.Format("Load Factor = {0, -20}", hashTable.LoadFactor()));
+            Console.WriteLine();
+            Console.WriteLine("HT state: ");
+            hashTable.Print();
+
+            Console.WriteLine();
+
+            //removing non existing
+            Console.WriteLine("Remove " + hashTable.Remove(p4.LastName));
+            Console.WriteLine("HT size = " + hashTable.Size());
+            Console.WriteLine(String.Format("Load Factor = {0, -20}", hashTable.LoadFactor()));
+            Console.WriteLine();
+            Console.WriteLine("HT state: ");
+            hashTable.Print();
+
+            Console.WriteLine();
+
+            Console.WriteLine("Remove " + hashTable.Remove(p5.LastName));
+            Console.WriteLine("HT size = " + hashTable.Size());
+            Console.WriteLine(String.Format("Load Factor = {0, -20}", hashTable.LoadFactor()));
+            Console.WriteLine();
+            Console.WriteLine("HT state: ");
+            hashTable.Print();
+
+        }
 
     }
 }

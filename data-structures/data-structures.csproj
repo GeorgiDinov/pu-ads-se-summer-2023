@@ -46,6 +46,9 @@
     <Compile Include="ArrayIterator.cs" />
     <Compile Include="ArrayList.cs" />
     <Compile Include="BinaryHeap.cs" />
+    <Compile Include="HTHolder.cs" />
+    <Compile Include="HTLinearProbing.cs" />
+    <Compile Include="HTPerson.cs" />
     <Compile Include="IterableNode.cs" />
     <Compile Include="Iterator.cs" />
     <Compile Include="LinkedList.cs" />
