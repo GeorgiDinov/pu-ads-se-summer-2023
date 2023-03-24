@@ -38,6 +38,7 @@ namespace data_structures
             //LinkedListSim();
             //ArrayListSim();
             //HTLinearProbingSim();
+            BSTreeSim();
         }
 
 
@@ -75,6 +76,41 @@ namespace data_structures
             };
 
             return persons;
+        }
+
+        private static void BSTreeSim()
+        {
+            int[] values = { 25, 20, 15, 27, 30, 29, 26, 22, 32, 17 };
+            BSTree<int> tree = new BSTree<int>();
+            foreach (int value in values)
+            {
+                tree.Insert(value);
+            }
+
+            tree.TraverseInOrder();
+            tree.TraversePreOrder();
+            tree.TraversePostOrder();
+
+            Console.WriteLine("min = " + tree.Min());
+            Console.WriteLine("max = " + tree.Max());
+
+            Console.WriteLine("get 30 = " + tree.Get(30));
+            Console.WriteLine("get 15 = " + tree.Get(15));
+            Console.WriteLine("get 25 = " + tree.Get(25));
+            Console.WriteLine("get 8888 = " + tree.Get(8888));// will return default - '0'
+
+            Console.WriteLine("Deleting 30 ");
+            tree.Delete(30);
+            tree.TraverseInOrder();
+            Console.WriteLine("Deleting 15");
+            tree.Delete(15);
+            tree.TraverseInOrder();
+            Console.WriteLine("Deleting 25");
+            tree.Delete(25);
+            tree.TraverseInOrder();
+            Console.WriteLine("Deleting 8888");
+            tree.Delete(8888);
+            tree.TraverseInOrder();
         }
 
 
