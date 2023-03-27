@@ -12,7 +12,6 @@ namespace search_algorithms
             Console.Write("DFS = ");
             DFSRecursive(startVertex);
             Console.WriteLine();
-
         }
 
         private void DFSRecursive(Vertex startVertex)
