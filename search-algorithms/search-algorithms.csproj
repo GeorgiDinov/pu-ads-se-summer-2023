@@ -44,8 +44,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BFSBasedSimpleWebCrawler.cs" />
+    <Compile Include="BreadthFirstSearch.cs" />
+    <Compile Include="DepthFirstSearch.cs" />
+    <Compile Include="DepthFirstSearchRecursive.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vertex.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
